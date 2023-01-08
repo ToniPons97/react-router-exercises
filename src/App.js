@@ -8,12 +8,12 @@ import { GithubUser } from './components/GithubUser';
 function App() {
   return (
     <Routes>
-      <Route path='/' element={<Welcome name='Toni Pons'/>} />
+      <Route path='/' element={<Welcome />} />
+      <Route path='/:name' element={<Welcome />} />
       <Route path='/counter' element={<Counter />} />
       <Route path='/users' element={<ShowGithubUser />}>
         <Route path=':user' element={<GithubUser />} />
       </Route>
-
     </Routes>
   );
 }

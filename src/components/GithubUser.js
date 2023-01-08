@@ -4,7 +4,7 @@ import { useOutletContext } from "react-router-dom";
 export const GithubUser = () => {
     const [data, setData] = useState([]);
     const [error, setError] = useState(null);
-    const [user] = useOutletContext();
+    const user = useOutletContext();
 
     const fetchGithubUser = async (user) => {
         if (!user) 
