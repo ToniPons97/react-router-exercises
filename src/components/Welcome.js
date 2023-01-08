@@ -1,7 +1,6 @@
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-export const Welcome = () => {
-    const { name = 'User' } = useParams();
+export const Welcome = ({ name = 'User' }) => {
     return (
         <div>
             <h2>Hello, {name}!</h2>

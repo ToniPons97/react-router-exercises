@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useOutletContext } from "react-router-dom";
+import { useOutletContext, Link } from "react-router-dom";
 
 export const GithubUser = () => {
     const [data, setData] = useState([]);
@@ -27,6 +27,10 @@ export const GithubUser = () => {
 
     return (
         <div>
+            <Link to='/users'>Back</Link>
+            <br />
+            <Link to='/'>Go Home</Link>
+        
             {
                 !!data?.login ? 
                 <div>

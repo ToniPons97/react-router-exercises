@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 export const Counter = () => {
     const [count, setCount] = useState(0);
@@ -9,7 +10,9 @@ export const Counter = () => {
 
     return (
         <div>
-            <h1>Count: {count}</h1>
+            <h1>Counter!</h1>
+            <Link to={'/'}>Back</Link>
+            <h2>Count: {count}</h2>
             <button onClick={handleClickEvent}>Increment</button>
         </div>
     );
