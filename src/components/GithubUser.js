@@ -6,6 +6,7 @@ export const GithubUser = () => {
     const [error, setError] = useState(null);
     const user = useOutletContext();
 
+
     const fetchGithubUser = async (user) => {
         if (!user) 
             return;
@@ -27,10 +28,6 @@ export const GithubUser = () => {
 
     return (
         <div>
-            <Link to='/users'>Back</Link>
-            <br />
-            <Link to='/'>Go Home</Link>
-        
             {
                 !!data?.login ? 
                 <div>
@@ -58,6 +55,9 @@ export const GithubUser = () => {
                 {data?.updated_at && <li><b>Last Acccount Update at:</b> {data?.updated_at}</li>}
 
             </ul>
+            <Link to='/users'>Back</Link>
+            <br />
+            <Link to='/'>Go Home</Link>
         </div>
     );
 }
